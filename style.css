@@ -6,6 +6,8 @@ body {
     width: 100%;
     height: 100vh;
     background-color: rgb(245, 245, 245);
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 input {
@@ -14,8 +16,10 @@ input {
 
 #flip_book {
     position: relative;
-    width: 298px;
-    height: 420px;
+    width: 90%;
+    max-width: 298px;
+    height: auto;
+    aspect-ratio: 298 / 420;
     transition-duration: 1s;
     perspective: 2000px;
 }
@@ -54,7 +58,7 @@ input {
 
 .page {
     position: absolute;
-    top: 10px;
+    /* top: 10px; */
     left: 1px;
     width: 288px;
     height: 400px;
@@ -102,8 +106,8 @@ input {
 
 .edge_shading {
     position: absolute;
-    width: 288px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     z-index: 98;
 }
 
@@ -120,8 +124,8 @@ input {
       /* position: absolute; */
       top: 1px;
       left: 1px;
-      width: 283px;
-      height: 398px;
+      width: 100%;
+      height: 100%;
       border-radius: 5px 0 0 5px;  
 }
 
@@ -179,7 +183,7 @@ input {
 }
 
 #cover_checkbox:checked~#flip_book {
-    transform: translateX(144px)
+    transform: translateX(64%)
 }
 
 #cover_checkbox:checked~#flip_book .front_cover {
@@ -252,15 +256,6 @@ input {
 #page12_checkbox:checked~#flip_book #page12 {
     transform: rotateY(-180deg);
     z-index: 6;
-}
-
-
-#cover_content {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center; */
 }
 
 #hanuman_image {
@@ -357,4 +352,100 @@ input {
     text-align: justify;
     position: absolute;
     padding-top: 22%;
+}
+
+/*  */
+
+.front_cover,
+.back_cover {
+    width: 100%;
+    height: 100%;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+.front_page, .back_page {
+    width: 100%;
+    height: 100%;
+}
+
+.page-number {
+    font-size: 1.5vw;
+    bottom: 5%;
+    right: 5%;
+}
+
+#firstpageText, #secondpageText, #lastPageText {
+    font-size: 1.2vw;
+    padding: 5%;
+    text-align: justify;
+}
+
+/* #hanuman_image, .back_content {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    #firstpageText, #secondpageText, #lastPageText {
+        font-size: 1.8vw;
+    }
+
+    .page-number {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #flip_book {
+        width: 95%;
+        max-width: 250px;
+    }
+
+    #cover_text {
+        font-size: 4vw;
+    }
+
+    .page-number {
+        font-size: 2.5vw;
+    }
+
+    #firstpageText, #secondpageText, #lastPageText {
+        font-size: 2.5vw;
+    }
+
+    #hanuman_image, .back_content {
+        width: 100%;
+        max-height: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    #flip_book {
+        width: 100%;
+        max-width: 48%;
+    }
+
+    #cover_text {
+        font-size: 5vw;
+    }
+
+    .page-number {
+        font-size: 3vw;
+    }
+
+    #firstpageText, #secondpageText, #lastPageText {
+        font-size: 3.5vw;
+    }
+
+    #hanuman_image, .back_content {
+        width: 100%;
+        max-height: 85%;
+    }
 }
