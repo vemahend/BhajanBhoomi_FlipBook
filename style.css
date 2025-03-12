@@ -183,7 +183,7 @@ input {
 }
 
 #cover_checkbox:checked~#flip_book {
-    transform: translateX(64%)
+    transform: translateX(45%)
 }
 
 #cover_checkbox:checked~#flip_book .front_cover {
@@ -429,7 +429,7 @@ input {
 @media (max-width: 480px) {
     #flip_book {
         width: 100%;
-        max-width: 48%;
+        max-width: 53%;
     }
 
     #cover_text {
@@ -446,6 +446,6 @@ input {
 
     #hanuman_image, .back_content {
         width: 100%;
-        max-height: 85%;
+        max-height: 100%;
     }
 }
