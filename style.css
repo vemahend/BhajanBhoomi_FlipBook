@@ -198,62 +198,62 @@ input {
     height: 80%;
 }
 
-#page1_checkbox:checked~#flip_book #page1 {
+#p1CheckBox:checked~#flip_book #page1 {
     transform: rotateY(-180deg);
     z-index: 2;
 }
 
-#page2_checkbox:checked~#flip_book #page2 {
+#p2CheckBox:checked~#flip_book #page2 {
     transform: rotateY(-180deg);
     z-index: 3;
 }
 
-#page3_checkbox:checked~#flip_book #page3 {
+#p3CheckBox:checked~#flip_book #page3 {
     transform: rotateY(-180deg);
     z-index: 4;
 }
 
-#page4_checkbox:checked~#flip_book #page4 {
+#p4CheckBox:checked~#flip_book #page4 {
     transform: rotateY(-180deg);
     z-index: 5;
 }
 
-#page5_checkbox:checked~#flip_book #page5 {
+#p5CheckBox:checked~#flip_book #page5 {
     transform: rotateY(-180deg);
     z-index: 6;
 }
 
-#page6_checkbox:checked~#flip_book #page6 {
+#p6CheckBox:checked~#flip_book #page6 {
     transform: rotateY(-180deg);
     z-index: 6;
 }
 
-#page7_checkbox:checked~#flip_book #page7 {
+#p7CheckBox:checked~#flip_book #page7 {
     transform: rotateY(-180deg);
     z-index: 6;
 }
 
-#page8_checkbox:checked~#flip_book #page8 {
+#p8CheckBox:checked~#flip_book #page8 {
     transform: rotateY(-180deg);
     z-index: 6;
 }
 
-#page9_checkbox:checked~#flip_book #page9 {
+#p9CheckBox:checked~#flip_book #page9 {
     transform: rotateY(-180deg);
     z-index: 6;
 }
 
-#page10_checkbox:checked~#flip_book #page10 {
+#p10CheckBox:checked~#flip_book #page10 {
     transform: rotateY(-180deg);
     z-index: 6;
 }
 
-#page11_checkbox:checked~#flip_book #page11 {
+#p11CheckBox:checked~#flip_book #page11 {
     transform: rotateY(-180deg);
     z-index: 6;
 }
 
-#page12_checkbox:checked~#flip_book #page12 {
+#p12CheckBox:checked~#flip_book #page12 {
     transform: rotateY(-180deg);
     z-index: 6;
 }
