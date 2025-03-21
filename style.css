@@ -378,11 +378,11 @@ input {
     right: 5%;
 }
 
-#firstpageText, #secondpageText, #lastPageText {
+/* #firstpageText, #secondpageText, #lastPageText {
     font-size: 1.2vw;
     padding: 5%;
     text-align: justify;
-}
+} */
 
 /* #hanuman_image, .back_content {
     width: 100%;
