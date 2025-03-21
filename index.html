@@ -37,7 +37,14 @@
             </label>
             <!-- <img class="edge_shading" src="./resources/images/front_page_edge_shading.png" alt="Front page edge shading"> -->
         </div>
-
+        <div class="audio-player" style="position: absolute;z-index: 100;">
+            <button onclick="togglePlay()" id="playPauseBtn">▶️</button>
+            <audio id="myAudio">
+                <source src="./resources/audio/shri_hanuman_chalisa.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button onclick="toggleMute()" id="muteBtn">🔊</button>
+        </div>
         <div class="page" id="page1">
             <div class="front_page">
                 <label for="p1CheckBox"></label>
@@ -76,8 +83,8 @@
                 <label for="p2CheckBox"></label>
                 <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
                     alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/HanumanAI_2.jpeg" alt="Hanuman Ji">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_2.jpeg"
+                    alt="Hanuman Ji">
             </div>
         </div>
 
@@ -98,8 +105,8 @@
                 <label for="p3CheckBox"></label>
                 <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
                     alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/HanumanAI_3.jpeg" alt="Hanuman Ji">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_3.jpeg"
+                    alt="Hanuman Ji">
             </div>
         </div>
 
@@ -120,8 +127,8 @@
                 <label for="p4CheckBox"></label>
                 <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
                     alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/HanumanAI_4.jpeg" alt="Hanuman Ji">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_4.jpeg"
+                    alt="Hanuman Ji">
             </div>
         </div>
 
@@ -142,8 +149,8 @@
                 <label for="p5CheckBox"></label>
                 <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
                     alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/HanumanAI_5.jpeg" alt="Hanuman Ji">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_5.jpeg"
+                    alt="Hanuman Ji">
             </div>
         </div>
 
@@ -164,8 +171,8 @@
                 <label for="p6CheckBox"></label>
                 <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
                     alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/HanumanAI__1.0.jpeg" alt="Hanuman Ji">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI__1.0.jpeg"
+                    alt="Hanuman Ji">
             </div>
         </div>
 
@@ -186,8 +193,8 @@
                 <label for="p7CheckBox"></label>
                 <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
                     alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/HanumanAI_6.jpeg" alt="Hanuman Ji">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_6.jpeg"
+                    alt="Hanuman Ji">
             </div>
         </div>
 
@@ -208,8 +215,8 @@
                 <label for="p8CheckBox"></label>
                 <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
                     alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/HanumanAI_11.jpg" alt="Hanuman Ji">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_11.jpg"
+                    alt="Hanuman Ji">
             </div>
         </div>
 
@@ -230,8 +237,8 @@
                 <label for="p9CheckBox"></label>
                 <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
                     alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/HanumanAI__1.0.jpeg" alt="Hanuman Ji">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI__1.0.jpeg"
+                    alt="Hanuman Ji">
             </div>
         </div>
 
@@ -252,8 +259,8 @@
                 <label for="p10CheckBox"></label>
                 <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
                     alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/HanumanAI_5.jpeg" alt="Hanuman Ji">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_5.jpeg"
+                    alt="Hanuman Ji">
             </div>
         </div>
 
@@ -274,8 +281,7 @@
                 <label for="p11CheckBox"></label>
                 <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
                     alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/HA.jpg" alt="Hanuman Ji">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HA.jpg" alt="Hanuman Ji">
             </div>
         </div>
 
@@ -294,20 +300,39 @@
                 <label for="p12CheckBox"></label>
                 <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
                     alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/Hanumanjo.gif" alt="Hanuman Ji">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/Hanumanjo.gif"
+                    alt="Hanuman Ji">
                 </span>
             </div>
         </div>
 
-        <div  class="back_cover" onclick="reloadPage()"></div>
+        <div class="back_cover" onclick="reloadPage()"></div>
     </div>
 
 </body>
 <script>
-    function reloadPage()
-    {
+    function reloadPage() {
         location.reload();
     }
+
+    var audio = document.getElementById("myAudio");
+    var playPauseBtn = document.getElementById("playPauseBtn");
+    var muteBtn = document.getElementById("muteBtn");
+
+    function togglePlay() {
+        if (audio.paused) {
+            audio.play();
+            playPauseBtn.innerHTML = "⏸️"; // Pause icon
+        } else {
+            audio.pause();
+            playPauseBtn.innerHTML = "▶️"; // Play icon
+        }
+    }
+
+    function toggleMute() {
+        audio.muted = !audio.muted;
+        muteBtn.innerHTML = audio.muted ? "🔇" : "🔊"; // Change icon
+    }
 </script>
+
 </html>
