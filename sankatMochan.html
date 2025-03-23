@@ -1,41 +1,275 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floating Logo</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .image-container {
-            margin-top: 50px;
-        }
-        .image-container img {
-            width: 50%;
-            max-width: 500px;
-            display: block;
-            margin: 0 auto;
-        }
-        .moving-text {
-            font-size: 24px;
-            font-weight: bold;
-            color: orangered;
-            margin-top: 20px;
-            animation: moveText 3s linear infinite alternate;
-        }
-        @keyframes moveText {
-            0% { transform: translateX(-10px); }
-            100% { transform: translateX(10px); }
-        }
-    </style>
+    <title>Hanuman Chalisa</title>
+    <link rel="stylesheet" href="./sankat_mochan_style.css">
 </head>
+
 <body>
-    <div class="image-container">
-        <img src="./resources/images/HanjimanJiSankatMochan.jpg" alt="Hanjiman Ji Sankat Mochan">
-        <div class="moving-text">Coming Soon</div>
+    <input type="checkbox" id="cover_checkbox">
+    <input type="checkbox" id="p1CheckBox">
+    <input type="checkbox" id="p2CheckBox">
+    <input type="checkbox" id="p3CheckBox">
+    <input type="checkbox" id="p4CheckBox">
+    <input type="checkbox" id="p5CheckBox">
+    <input type="checkbox" id="p6CheckBox">
+    <input type="checkbox" id="p7CheckBox">
+    <input type="checkbox" id="p8CheckBox">
+    <input type="checkbox" id="p9CheckBox">
+
+    <div id="flip_book">
+        <div class="front_cover">
+            <label for="cover_checkbox" id="cover">
+                <div id="cover_content">
+                    <img id="hanuman_image" src="./resources/images/SankatMochan/sankat-mochan" alt="Hanuman Ji">
+                    <span id="cover_text">Sankat Mochan</span>
+                </div>
+
+            </label>
+            <!-- <img class="edge_shading" src="./resources/images/front_page_edge_shading.png" alt="Front page edge shading"> -->
+        </div>
+        <div class="page" id="page1">
+            <div class="front_page">
+                <label for="p1CheckBox"></label>
+                <span id="firstpageText">
+                    <p>बाल समय रवि भक्षी लियो तब,</p>
+                    <p>तीनहुं लोक भयो अंधियारों।</p>
+                    <p>ताहि सों त्रास भयो जग को,</p>
+                    <p>यह संकट काहु सों जात न टारो।</p>
+                    <p>देवन आनि करी बिनती तब,</p>
+                    <p>छाड़ी दियो रवि कष्ट निवारो।</p>
+                    <p>को नहीं जानत है जग में कपि,</p>
+                    <p>संकटमोचन नाम तिहारो॥ १ ॥</p>
+                </span>
+                <div class="page-number">1</div>
+            </div>
+            <div class="back_page">
+                <label for="p1CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
+                    alt="Back page edge shading">
+                <img class="back_content" id="" alt="Back content"
+                    src="./resources/images/SankatMochan/sankat-mochan_2" alt="Hanuman Ji">
+            </div>
+        </div>
+
+        <div class="page" id="page2">
+            <div class="front_page">
+                <label for="p2CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
+                    alt="Front page edge shading">
+                <span id="secondpageText" class="front_content">
+                    <p>बालि की त्रास कपीस बसैं गिरि,</p>
+                    <p>जात महाप्रभु पंथ निहारो।</p>
+                    <p>चौंकि महामुनि साप दियो तब,</p>
+                    <p>चाहिए कौन बिचार बिचारो।</p>
+                    <p>कैद्विज रूप लिवाय महाप्रभु,</p>
+                    <p>सो तुम दास के सोक निवारो॥ २ ॥</p>
+                    <p>को नहीं जानत है जग में कपि,</p>
+                    <p>संकटमोचन नाम तिहारो॥ १ ॥</p>
+                </span>
+                <div class="page-number">2</div>
+            </div>
+            <div class="back_page">
+                <label for="p2CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
+                    alt="Back page edge shading">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/SankatMochan/sankat-mochan_3.jpg"
+                    alt="Hanuman Ji">
+            </div>
+        </div>
+
+        <div class="page" id="page3">
+            <div class="front_page">
+                <label for="p3CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
+                    alt="Front page edge shading">
+                <span id="secondpageText" class="front_content">
+                    <p>अंगद के संग लेन गए सिय,</p>
+                    <p>खोज कपीस यह बैन उचारो।</p>
+                    <p>जीवत ना बचिहौ हम सो जु,</p>
+                    <p>बिना सुधि लाये इहाँ पगु धारो।</p>
+                    <p>हेरी थके तट सिन्धु सबै तब,</p>
+                    <p>लाए सिया-सुधि प्राण उबारो॥ ३ ॥</p>
+                    <p>को नहीं जानत है जग में कपि,</p>
+                    <p>संकटमोचन नाम तिहारो॥ १ ॥</p>
+                </span>
+                <div class="page-number">3</div>
+            </div>
+            <div class="back_page">
+                <label for="p3CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
+                    alt="Back page edge shading">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/SankatMochan/sankat-mochan_4.jpg"
+                    alt="Hanuman Ji">
+            </div>
+        </div>
+
+        <div class="page" id="page4">
+            <div class="front_page">
+                <label for="p4CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
+                    alt="Front page edge shading">
+                <span id="secondpageText" class="front_content">
+                    <p>रावण त्रास दई सिय को सब,</p>
+                    <p>राक्षसी सों कही सोक निवारो।</p>
+                    <p>ताहि समय हनुमान महाप्रभु,</p>
+                    <p>जाए महा रजनीचर मारो।</p>
+                    <p>चाहत सीय असोक सों आगि सु,</p>
+                    <p>दै प्रभुमुद्रिका सोक निवारो॥ ४ ॥</p>
+                    <p>को नहीं जानत है जग में कपि,</p>
+                    <p>संकटमोचन नाम तिहारो॥ १ ॥</p>
+                </span>
+                <div class="page-number">4</div>
+            </div>
+            <div class="back_page">
+                <label for="p4CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
+                    alt="Back page edge shading">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/SankatMochan/sankat-mochan_5"
+                    alt="Hanuman Ji">
+            </div>
+        </div>
+
+        <div class="page" id="page5">
+            <div class="front_page">
+                <label for="p5CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
+                    alt="Front page edge shading">
+                <span id="secondpageText" class="front_content">
+                    <p>बान लग्यो उर लछिमन के तब,</p>
+                    <p>प्राण तजे सुत रावन मारो।</p>
+                    <p>लै गृह बैद्य सुषेन समेत,</p>
+                    <p>तबै गिरि द्रोण सु बीर उपारो।</p>
+                    <p>आनि सजीवन हाथ दई तब,</p>
+                    <p>लछिमन के तुम प्रान उबारो॥ ५ ॥</p>
+                    <p>को नहीं जानत है जग में कपि,</p>
+                    <p>संकटमोचन नाम तिहारो॥ १ ॥</p>
+                </span>
+                <div class="page-number">5</div>
+            </div>
+            <div class="back_page">
+                <label for="p5CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/SankatMochan/sankat-mochan_6"
+                    alt="Back page edge shading">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/SankatMochan/sankat-mochan_6"
+                    alt="Hanuman Ji">
+            </div>
+        </div>
+
+        <div class="page" id="page6">
+            <div class="front_page">
+                <label for="p6CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
+                    alt="Front page edge shading">
+                <span id="secondpageText" class="front_content">
+                    <p>रावण युद्ध अजान कियो तब,</p>
+                    <p>नाग कि फाँस सबै सिर डारो।</p>
+                    <p>श्रीरघुनाथ समेत सबै दल,</p>
+                    <p>मोह भयो यह संकट भारो I</p>
+                    <p>आनि खगेस तबै हनुमान जु,</p>
+                    <p>बंधन काटि सुत्रास निवारो॥ ६ ॥</p>
+                    <p>को नहीं जानत है जग में कपि,</p>
+                    <p>संकटमोचन नाम तिहारो॥ १ ॥</p>
+                </span>
+                <div class="page-number">6</div>
+            </div>
+            <div class="back_page">
+                <label for="p6CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/SankatMochan/sankat-mochan_7"
+                    alt="Back page edge shading">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI__1.0.jpeg"
+                    alt="Hanuman Ji">
+            </div>
+        </div>
+
+        <div class="page" id="page7">
+            <div class="front_page">
+                <label for="p7CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
+                    alt="Front page edge shading">
+                <span id="secondpageText" class="front_content">
+                    <p>बंधु समेत जबै अहिरावन,</p>
+                    <p>लै रघुनाथ पताल सिधारो।</p>
+                    <p>देबिहिं पूजि भलि विधि सों बलि,</p>
+                    <p>देउ सबै मिलि मन्त्र विचारो।</p>
+                    <p>जाय सहाय भयो तब ही,</p>
+                    <p>अहिरावन सैन्य समेत संहारो॥ ७ ॥</p>
+                    <p>को नहीं जानत है जग में कपि,</p>
+                    <p>संकटमोचन नाम तिहारो॥ १ ॥</p>
+                </span>
+                <div class="page-number">7</div>
+            </div>
+            <div class="back_page">
+                <label for="p7CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/SankatMochan/sankat-mochan_8"
+                    alt="Back page edge shading">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_6.jpeg"
+                    alt="Hanuman Ji">
+            </div>
+        </div>
+
+        <div class="page" id="page8">
+            <div class="front_page">
+                <label for="p8CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
+                    alt="Front page edge shading">
+                <span id="secondpageText" class="front_content">
+                    <p>काज किये बड़ देवन के तुम,</p>
+                    <p>बीर महाप्रभु देखि बिचारो।</p>
+                    <p>कौन सो संकट मोर गरीब को,</p>
+                    <p>जो तुमसे नहिं जात है टारो।</p>
+                    <p>बेगि हरो हनुमान महाप्रभु,</p>
+                    <p>जो कछु संकट होय हमारो॥ ८ ॥</p>
+                    <p>को नहीं जानत है जग में कपि,</p>
+                    <p>संकटमोचन नाम तिहारो॥ १ ॥</p>
+                </span>
+                <div class="page-number">8</div>
+            </div>
+            <div class="back_page">
+                <label for="p8CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/SankatMochan/sankat-mochan_9"
+                    alt="Back page edge shading">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_11.jpg"
+                    alt="Hanuman Ji">
+            </div>
+        </div>
+
+        <div class="page" id="page9">
+            <div class="front_page">
+                <label for="p9CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
+                    alt="Front page edge shading">
+                <span id="lastPageText" class="front_content">
+                    <p>॥ दोहा ॥</p>
+                    <p>लाल देह लाली लसे,</p>
+                    <p>अरु धरि लाल लंगूर।</p>
+                    <p>वज्र देह दानव दलन,</p>
+                    <p>जय जय जय कपि सूर॥</p>
+                </span>
+                <div class="page-number">12</div>
+            </div>
+            <div class="back_page">
+                <label for="p9CheckBox"></label>
+                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
+                    alt="Back page edge shading">
+                <img class="back_content" id="" alt="Back content" src="./resources/images/Hanumanjo.gif"
+                    alt="Hanuman Ji">
+                </span>
+            </div>
+        </div>
+
+        <div class="back_cover" onclick="reloadPage()"></div>
     </div>
+
 </body>
+<script>
+    function reloadPage() {
+        location.reload();
+    }
+</script>
+
 </html>
