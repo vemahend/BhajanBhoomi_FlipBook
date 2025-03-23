@@ -1,338 +1,163 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanuman Chalisa</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Floating Logo Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #800000;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .menu {
+            display: flex;
+            gap: 20px;
+            margin-right: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+        }
+        .menu a:hover {
+            background-color: orangered;
+            border-radius: 5px;
+        }
+        .logo-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            position: absolute;
+            left: 10px;
+            transform: translate(0, 0);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 11%;
+            }
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #800000;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .menu a {
+                padding: 10px;
+                display: block;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .menu.active {
+                display: flex;
+            }
+        }
+        #contentFrame {
+            width: 100%;
+            height: calc(100vh - 64px);
+            border: none;
+            overflow: hidden;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Prevents page scrollbars */
+            height: 100%;
+            width: 100%;
+        }
+
+        iframe {
+            width: 100vw;
+            /* Full viewport width */
+            height: calc(100vh - 60px);
+            /* Adjust based on your navbar height */
+            border: none;
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #663399;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('active');
+        }
+    </script>
 </head>
-
 <body>
-    <input type="checkbox" id="cover_checkbox">
-    <input type="checkbox" id="p1CheckBox">
-    <input type="checkbox" id="p2CheckBox">
-    <input type="checkbox" id="p3CheckBox">
-    <input type="checkbox" id="p4CheckBox">
-    <input type="checkbox" id="p5CheckBox">
-    <input type="checkbox" id="p6CheckBox">
-    <input type="checkbox" id="p7CheckBox">
-    <input type="checkbox" id="p8CheckBox">
-    <input type="checkbox" id="p9CheckBox">
-    <input type="checkbox" id="p10CheckBox">
-    <input type="checkbox" id="p11CheckBox">
-    <input type="checkbox" id="p12CheckBox">
-    <input type="checkbox" id="p13CheckBox">
-    <input type="checkbox" id="p14CheckBox">
-
-    <div id="flip_book">
-        <div class="front_cover">
-            <label for="cover_checkbox" id="cover">
-                <div id="cover_content">
-                    <img id="hanuman_image" src="./resources/images/HanumanAI_12.jpg" alt="Hanuman Ji">
-                    <span id="cover_text">Hanuman Chalisa</span>
-                </div>
-
-            </label>
-            <!-- <img class="edge_shading" src="./resources/images/front_page_edge_shading.png" alt="Front page edge shading"> -->
-        </div>
-        <div class="audio-player">
-            <button onclick="togglePlay()" id="playPauseBtn">▶️</button>
-            <audio id="myAudio">
-                <source src="./resources/audio/shri_hanuman_chalisa.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-            <button onclick="toggleMute()" id="muteBtn">🔊</button>
-        </div>
-        <div class="page" id="page1">
-            <div class="front_page">
-                <label for="p1CheckBox"></label>
-                <span id="firstpageText">
-                    <p>श्रीगुरु चरन सरोज रज,<br> निजमन मुकुरु सुधारि।</p>
-                    <p>बरनउं रघुबर बिमल जसु,<br> जो दायक फल चारि।।</p>
-                    <p>बुद्धिहीन तनु जानिके,<br> सुमिरौं पवन-कुमार।</p>
-                    <p>बल बुधि बिद्या देहु मोहिं,<br> हरहु कलेस बिकार।।</p>
-                </span>
-                <div class="page-number">1</div>
-            </div>
-            <div class="back_page">
-                <label for="p1CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content"
-                    src="./resources/images/lord-hanuman_1037680-49305.jpg" alt="Hanuman Ji">
+    <div class="header">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="./resources/images/BBLogo.webp" alt="Logo" onclick="loadPage('landingPage.html')">
+                
             </div>
         </div>
-
-        <div class="page" id="page2">
-            <div class="front_page">
-                <label for="p2CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
-                    alt="Front page edge shading">
-                <span id="secondpageText" class="front_content">
-                    <p>जय हनुमान ज्ञान गुन सागर।<br>
-                        जय कपीस तिहुं लोक उजागर।।</p>
-                    <p>राम दूत अतुलित बल धामा। <br> अंजनि-पुत्र पवनसुत नामा।।</p>
-                    <p>महाबीर बिक्रम बजरंगी। <br> कुमति निवार सुमति के संगी।।</p>
-                    <p>कंचन बरन बिराज सुबेसा। <br> कानन कुण्डल कुँचित केसा।।</p>
-                </span>
-                <div class="page-number">2</div>
-            </div>
-            <div class="back_page">
-                <label for="p2CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_2.jpeg"
-                    alt="Hanuman Ji">
-            </div>
+        <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+        <div class="menu">
+            <a href="#" onclick="loadPage('hanumanChalisa.html')">Hanuman Chalisa</a>
+            <a href="#" onclick="loadPage('sankatMochan.html')">Sankat Mochan</a>
+            <a href="#">About</a>
         </div>
-
-        <div class="page" id="page3">
-            <div class="front_page">
-                <label for="p3CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
-                    alt="Front page edge shading">
-                <span id="secondpageText" class="front_content">
-                    <p>हाथ बज्र औ ध्वजा बिराजे। <br> कांधे मूंज जनेउ साजे।।</p>
-                    <p>शंकर सुवन केसरी नंदन। <br> तेज प्रताप महा जग वंदन।।</p>
-                    <p>बिद्यावान गुनी अति चातुर। <br> राम काज करिबे को आतुर।।</p>
-                    <p>प्रभु चरित्र सुनिबे को रसिया। <br> राम लखन सीता मन बसिया।।</p>
-                </span>
-                <div class="page-number">3</div>
-            </div>
-            <div class="back_page">
-                <label for="p3CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_3.jpeg"
-                    alt="Hanuman Ji">
-            </div>
-        </div>
-
-        <div class="page" id="page4">
-            <div class="front_page">
-                <label for="p4CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
-                    alt="Front page edge shading">
-                <span id="secondpageText" class="front_content">
-                    <p>सूक्ष्म रूप धरि सियहिं दिखावा। <br> बिकट रूप धरि लंक जरावा।।</p>
-                    <p>भीम रूप धरि असुर संहारे। <br> रामचन्द्र के काज संवारे।।</p>
-                    <p>लाय सजीवन लखन जियाये। <br> श्री रघुबीर हर्षि उर लाये।।</p>
-                    <p>रघुपति कीन्ही बहुत बड़ाई। <br> तुम मम प्रिय भरतहि सम भाई।।</p>
-                </span>
-                <div class="page-number">4</div>
-            </div>
-            <div class="back_page">
-                <label for="p4CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_4.jpeg"
-                    alt="Hanuman Ji">
-            </div>
-        </div>
-
-        <div class="page" id="page5">
-            <div class="front_page">
-                <label for="p5CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
-                    alt="Front page edge shading">
-                <span id="secondpageText" class="front_content">
-                    <p>सहस बदन तुम्हरो जस गावैं। <br> अस कहि श्रीपति कण्ठ लगावैं।।</p>
-                    <p>सनकादिक ब्रह्मादि मुनीसा। <br> नारद सारद सहित अहीसा।।</p>
-                    <p>जम कुबेर दिगपाल जहां ते। <br> कबि कोबिद कहि सके कहां ते।।</p>
-                    <p>तुम उपकार सुग्रीवहिं कीन्हा। <br> राम मिलाय राज पद दीन्हा।।</p>
-                </span>
-                <div class="page-number">5</div>
-            </div>
-            <div class="back_page">
-                <label for="p5CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_5.jpeg"
-                    alt="Hanuman Ji">
-            </div>
-        </div>
-
-        <div class="page" id="page6">
-            <div class="front_page">
-                <label for="p6CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
-                    alt="Front page edge shading">
-                <span id="secondpageText" class="front_content">
-                    <p>तुम्हरो मंत्र बिभीषन माना। <br>लंकेश्वर भए सब जग जाना।।</p>
-                    <p>जुग सहस्र जोजन पर भानु। <br> लील्यो ताहि मधुर फल जानू।।</p>
-                    <p>प्रभु मुद्रिका मेलि मुख माहीं। <br> जलधि लांघि गये अचरज नाहीं।।</p>
-                    <p>दुर्गम काज जगत के जेते। <br> सुगम अनुग्रह तुम्हरे तेते।।</p>
-                </span>
-                <div class="page-number">6</div>
-            </div>
-            <div class="back_page">
-                <label for="p6CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI__1.0.jpeg"
-                    alt="Hanuman Ji">
-            </div>
-        </div>
-
-        <div class="page" id="page7">
-            <div class="front_page">
-                <label for="p7CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
-                    alt="Front page edge shading">
-                <span id="secondpageText" class="front_content">
-                    <p>राम दुआरे तुम रखवारे। <br> होत न आज्ञा बिनु पैसारे।।</p>
-                    <p>सब सुख लहै तुम्हारी सरना। <br> तुम रच्छक काहू को डर ना।।</p>
-                    <p>आपन तेज सम्हारो आपै। <br> तीनों लोक हांक तें कांपै।।</p>
-                    <p>भूत पिसाच निकट नहिं आवै। <br> महाबीर जब नाम सुनावै।।</p>
-                </span>
-                <div class="page-number">7</div>
-            </div>
-            <div class="back_page">
-                <label for="p7CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_6.jpeg"
-                    alt="Hanuman Ji">
-            </div>
-        </div>
-
-        <div class="page" id="page8">
-            <div class="front_page">
-                <label for="p8CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
-                    alt="Front page edge shading">
-                <span id="secondpageText" class="front_content">
-                    <p>नासै रोग हरे सब पीरा। <br> जपत निरन्तर हनुमत बीरा।।</p>
-                    <p>संकट तें हनुमान छुड़ावै। <br> मन क्रम बचन ध्यान जो लावै।।</p>
-                    <p>सब पर राम तपस्वी राजा। <br> तिन के काज सकल तुम साजा।।</p>
-                    <p>और मनोरथ जो कोई लावै। <br> सोई अमित जीवन फल पावै।।</p>
-                </span>
-                <div class="page-number">8</div>
-            </div>
-            <div class="back_page">
-                <label for="p8CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_11.jpg"
-                    alt="Hanuman Ji">
-            </div>
-        </div>
-
-        <div class="page" id="page9">
-            <div class="front_page">
-                <label for="p9CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
-                    alt="Front page edge shading">
-                <span id="secondpageText" class="front_content">
-                    <p>चारों जुग परताप तुम्हारा। <br> है परसिद्ध जगत उजियारा।।</p>
-                    <p>साधु संत के तुम रखवारे।। <br> असुर निकन्दन राम दुलारे।।</p>
-                    <p>अष्टसिद्धि नौ निधि के दाता। <br> अस बर दीन जानकी माता।।</p>
-                    <p>राम रसायन तुम्हरे पासा। <br> सदा रहो रघुपति के दासा।।</p>
-                </span>
-                <div class="page-number">9</div>
-            </div>
-            <div class="back_page">
-                <label for="p9CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI__1.0.jpeg"
-                    alt="Hanuman Ji">
-            </div>
-        </div>
-
-        <div class="page" id="page10">
-            <div class="front_page">
-                <label for="p10CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
-                    alt="Front page edge shading">
-                <span id="secondpageText" class="front_content">
-                    <p>तुह्मरे भजन राम को पावै। <br> जनम जनम के दुख बिसरावै।।</p>
-                    <p>अंत काल रघुबर पुर जाई। <br> जहां जन्म हरिभक्त कहाई।।</p>
-                    <p>और देवता चित्त न धरई। <br> हनुमत सेइ सर्ब सुख करई।।</p>
-                    <p>सङ्कट कटै मिटै सब पीरा। <br> जो सुमिरै हनुमत बलबीरा।।</p>
-                </span>
-                <div class="page-number">10</div>
-            </div>
-            <div class="back_page">
-                <label for="p10CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content" src="./resources/images/HanumanAI_5.jpeg"
-                    alt="Hanuman Ji">
-            </div>
-        </div>
-
-        <div class="page" id="page11">
-            <div class="front_page">
-                <label for="p11CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
-                    alt="Front page edge shading">
-                <span id="secondpageText" class="front_content">
-                    <p>जय जय जय हनुमान गोसाईं। <br> कृपा करहु गुरुदेव की नाईं।।</p>
-                    <p>जो सत बार पाठ कर कोई। <br> छूटहि बन्दि महा सुख होई।।</p>
-                    <p>जो यह पढ़ै हनुमान चालीसा। <br> होय सिद्धि साखी गौरीसा।।</p>
-                    <p>तुलसीदास सदा हरि चेरा। <br> कीजै नाथ हृदय महं डेरा।।</p>
-                </span>
-                <div class="page-number">11</div>
-            </div>
-            <div class="back_page">
-                <label for="p11CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content" src="./resources/images/HA.jpg" alt="Hanuman Ji">
-            </div>
-        </div>
-
-        <div class="page" id="page12">
-            <div class="front_page">
-                <label for="p12CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/front_page_edge_shading.png"
-                    alt="Front page edge shading">
-                <span id="lastPageText" class="front_content">
-                    <p>पवनतनय संकट हरन,<br> मंगल मूरति रूप।</p>
-                    <p>राम लखन सीता सहित, <br> हृदय बसहु सुर भूप।।</p>
-                </span>
-                <div class="page-number">12</div>
-            </div>
-            <div class="back_page">
-                <label for="p12CheckBox"></label>
-                <img class="edge_shading" src="./resources/images/back_page_edge_shading.png"
-                    alt="Back page edge shading">
-                <img class="back_content" id="" alt="Back content" src="./resources/images/Hanumanjo.gif"
-                    alt="Hanuman Ji">
-                </span>
-            </div>
-        </div>
-
-        <div class="back_cover" onclick="reloadPage()"></div>
     </div>
+    <iframe id="contentFrame" src="./landingPage.html"></iframe>
+
+    <script>
+        function loadPage(pageUrl) {
+            document.getElementById("contentFrame").src = pageUrl;
+            if (window.innerWidth <= 600) {
+                document.getElementById("menu").style.display = "none";
+            }
+        }
+    </script>
+
 
 </body>
-<script>
-    function reloadPage() {
-        location.reload();
-    }
-
-    var audio = document.getElementById("myAudio");
-    var playPauseBtn = document.getElementById("playPauseBtn");
-    var muteBtn = document.getElementById("muteBtn");
-
-    function togglePlay() {
-        if (audio.paused) {
-            audio.play();
-            playPauseBtn.innerHTML = "⏸️"; // Pause icon
-        } else {
-            audio.pause();
-            playPauseBtn.innerHTML = "▶️"; // Play icon
-        }
-    }
-
-    function toggleMute() {
-        audio.muted = !audio.muted;
-        muteBtn.innerHTML = audio.muted ? "🔇" : "🔊"; // Change icon
-    }
-</script>
-
 </html>
