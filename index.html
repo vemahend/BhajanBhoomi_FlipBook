@@ -115,6 +115,11 @@
             .menu.active {
                 display: flex;
             }
+
+            .menu.inactive {
+                opacity: 0;
+                visibility: hidden;
+            }
         }
 
         #contentFrame {
@@ -179,7 +184,7 @@
         function loadPage(pageUrl) {
             document.getElementById("contentFrame").src = pageUrl;
             if (window.innerWidth <= 600) {
-                document.getElementById("menu").style.display = "none";
+                document.querySelector('.menu').classList.remove('active');
             }
         }
     </script>
