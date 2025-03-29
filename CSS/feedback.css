@@ -42,7 +42,7 @@ textarea {
 
 .stars {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 5px;
     flex-direction: row-reverse;
 }
