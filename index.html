@@ -11,7 +11,7 @@
 <!-- End Google Analytics -->
 
 <head>
-    <script src="./Scripts/rightCdisable.js"></script>
+    <!-- <script src="./Scripts/rightCdisable.js"></script> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhajan Bhoomi</title>
@@ -41,10 +41,9 @@
             <a href="#" onclick="loadPage('./Pages/hanumanChalisa.html')">Hanuman Chalisa</a>
             <a href="#" onclick="loadPage('./Pages/sankatMochan.html')">Sankat Mochan</a>
             <div class="menu-item">
-                <a href="#" onclick="toggleSubMenu(event)">Artis ▼</a>
+                <a href="#" onclick="toggleSubMenu(event)">Aarti Sangrah ▼</a>
                 <div class="submenu">
-                    <a href="#" onclick="loadPage('./Pages/hanumanChalisa.html')">Ganesh ji</a>
-                    <a href="#" onclick="loadPage('./Pages/sankatMochan.html')">Shiv</a>
+                    <a href="#" onclick="loadPage('./Pages/Aartis/ganesh_ji.html')">Ganesh Ji Aarti</a>
                 </div>
             </div>
             <a href="#" onclick="loadPage('./Pages/aboutme.html')">About Me</a>
@@ -52,7 +51,7 @@
         </div>
     </div>
     <iframe id="contentFrame" src="./Pages/landingPage.html"></iframe>
-
+    
     <script>
         function loadPage(pageUrl) {
             document.getElementById("contentFrame").src = pageUrl;
