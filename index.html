@@ -11,8 +11,9 @@
 <!-- End Google Analytics -->
 
 <head>
+    <script src="./Scripts/rightCdisable.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4518536586472143"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhajan Bhoomi</title>
@@ -169,18 +170,19 @@
     <div class="header">
         <div class="logo-container">
             <div class="logo">
-                <img src="./resources/images/BBLogo.webp" alt="Logo" onclick="loadPage('landingPage.html')">
+                <img src="./resources/images/BBLogo.webp" alt="Logo" onclick="loadPage('./Pages/landingPage.html')">
 
             </div>
         </div>
         <span class="menu-toggle" onclick="toggleMenu()">☰</span>
         <div class="menu">
-            <a href="#" onclick="loadPage('hanumanChalisa.html')">Hanuman Chalisa</a>
-            <a href="#" onclick="loadPage('sankatMochan.html')">Sankat Mochan</a>
-            <a href="#" onclick="loadPage('aboutme.html')">About Me</a>
+            <a href="#" onclick="loadPage('./Pages/hanumanChalisa.html')">Hanuman Chalisa</a>
+            <a href="#" onclick="loadPage('./Pages/sankatMochan.html')">Sankat Mochan</a>
+            <a href="#" onclick="loadPage('./Pages/aboutme.html')">About Me</a>
+            <a href="#" onclick="loadPage('./Pages/feedbackform.html')">Feedback</a>
         </div>
     </div>
-    <iframe id="contentFrame" src="./landingPage.html"></iframe>
+    <iframe id="contentFrame" src="./Pages/landingPage.html"></iframe>
 
     <script>
         function loadPage(pageUrl) {
