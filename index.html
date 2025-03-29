@@ -12,156 +12,18 @@
 
 <head>
     <script src="./Scripts/rightCdisable.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4518536586472143"
-        crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhajan Bhoomi</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .header {
-            background-color: #800000;
-            padding: 20px;
-            position: relative;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .menu {
-            display: flex;
-            gap: 20px;
-            margin-right: 20px;
-        }
-
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px 15px;
-        }
-
-        .menu a:hover {
-            background-color: orangered;
-            border-radius: 5px;
-        }
-
-        .logo-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo {
-            position: absolute;
-            left: 10px;
-            transform: translate(0, 0);
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 100;
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            color: white;
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding-top: 11%;
-            }
-
-            .menu {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: #800000;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                text-align: center;
-                padding: 10px 0;
-            }
-
-            .menu a {
-                padding: 10px;
-                display: block;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .menu.active {
-                display: flex;
-            }
-
-            .menu.inactive {
-                opacity: 0;
-                visibility: hidden;
-            }
-        }
-
-        #contentFrame {
-            width: 100%;
-            height: calc(100vh - 64px);
-            border: none;
-            overflow: hidden;
-        }
-
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            /* Prevents page scrollbars */
-            height: 100%;
-            width: 100%;
-        }
-
-        iframe {
-            width: 100vw;
-            /* Full viewport width */
-            height: calc(100vh - 60px);
-            /* Adjust based on your navbar height */
-            border: none;
-            display: block;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #663399;
-            color: white;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="./CSS/index.css">
     <script>
         function toggleMenu() {
             document.querySelector('.menu').classList.toggle('active');
+        }
+       
+        function toggleSubMenu(event) {
+            // event.preventDefault();
+            event.target.nextElementSibling.classList.toggle('show');
         }
     </script>
 </head>
@@ -178,6 +40,13 @@
         <div class="menu">
             <a href="#" onclick="loadPage('./Pages/hanumanChalisa.html')">Hanuman Chalisa</a>
             <a href="#" onclick="loadPage('./Pages/sankatMochan.html')">Sankat Mochan</a>
+            <div class="menu-item">
+                <a href="#" onclick="toggleSubMenu(event)">Artis ▼</a>
+                <div class="submenu">
+                    <a href="#" onclick="loadPage('./Pages/hanumanChalisa.html')">Ganesh ji</a>
+                    <a href="#" onclick="loadPage('./Pages/sankatMochan.html')">Shiv</a>
+                </div>
+            </div>
             <a href="#" onclick="loadPage('./Pages/aboutme.html')">About Me</a>
             <a href="#" onclick="loadPage('./Pages/feedbackform.html')">Feedback</a>
         </div>
