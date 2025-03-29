@@ -28,7 +28,7 @@ document.getElementById("feedbackform").addEventListener("submit", async functio
         showToast("Error: " + error.message);
     } else {
         showToast("Brilliant! Your suggestion means a lot to us!");
-        document.getElementById("userForm").reset(); // Clear form
+        document.getElementById("feedbackform").reset(); // Clear form
     }
 });
 
