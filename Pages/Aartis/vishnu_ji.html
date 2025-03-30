@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script src="../../Scripts/rightCdisable.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanuman Chalisa</title>
+    <link rel="stylesheet" href="../../CSS/vishnu_aarti.css">
+</head>
+
+<body>
+    <input type="checkbox" id="cover_checkbox">
+    <input type="checkbox" id="p1CheckBox">
+    <input type="checkbox" id="p2CheckBox">
+    <input type="checkbox" id="p3CheckBox">
+
+    <div id="flip_book">
+        <div class="front_cover">
+            <label for="cover_checkbox" id="cover">
+                <div id="cover_content">
+                    <img id="hanuman_image" src="../../resources/images/VishnuJi/V1.jpg" alt="Hanuman Ji">
+                    <span id="cover_text">Vishnu Ji Aarti</span>
+                    <span class="blink">click here!</span>
+                </div>
+
+            </label>
+            <!-- <img class="edge_shading" src="../../resources/images/front_page_edge_shading.png" alt="Front page edge shading"> -->
+        </div>
+        <div class="page" id="page1">
+            <div class="front_page">
+                <label for="p1CheckBox"></label>
+                <p class="aartiBanner">आरती श्री विष्णुजी की</p>
+                <span id="firstpageText">
+                    <p>ॐ जय जगदीश हरे, स्वामी जय जगदीश हरे।</p>
+                    <p>भक्त जनन के संकट, क्षण में दूर करे ॥ ॐ...</p>
+                    <p>जो ध्यावे फल पावे, दुख विनसे मन का।</p>
+                    <p>सुख संपति घर आवे, कष्ट मिटे तन का ॥ ॐ...</p>
+                    <p>मात-पिता तुम मेरे, शरण गहूं मैं किसकी।</p>
+                    <p>तुम बिन और न दूजा, आस करूं जिसकी ॥ ॐ...</p>
+                </span>
+                <div class="page-number">1</div>
+            </div>
+            <div class="back_page">
+                <label for="p1CheckBox"></label>
+                <img class="edge_shading" src="../../resources/images/back_page_edge_shading.png"
+                    alt="Back page edge shading">
+                <img class="back_content" id="" alt="Back content"
+                    src="../../resources/images/VishnuJi/v2.jpg" alt="Hanuman Ji">
+            </div>
+        </div>
+
+        <div class="page" id="page2">
+            <div class="front_page">
+                <label for="p2CheckBox"></label>
+                <img class="edge_shading" src="../../resources/images/front_page_edge_shading.png"
+                    alt="Front page edge shading">
+                <p class="aartiBanner">आरती श्री विष्णुजी की</p>
+                <span id="firstpageText">
+                    <p>तुम पूरण परमात्मा, तुम अंतर्यामी।</p>
+                    <p>पारब्रह्म परमेश्वर, तुम सबके स्वामी ॥ ॐ...</p>
+                    <p>तुम करुणा के सागर, तुम पालन कर्ता।</p>
+                    <p>मैं मूरख खल कामी, कृपा करो भर्ता ॥ ॐ...</p>
+                    <p>तुम हो एक अगोचर, सबके प्राणपती।</p>
+                    <p>किस विधि मिलूं दयामय, तुमको मैं कुमती ॥ ॐ...</p>
+                </span>
+                <div class="page-number">2</div>
+            </div>
+            <div class="back_page">
+                <label for="p2CheckBox"></label>
+                <img class="edge_shading" src="../../resources/images/back_page_edge_shading.png"
+                    alt="Back page edge shading">
+                <img class="back_content"alt="Back content" src="../../resources/images/VishnuJi/V3.png"
+                    alt="Hanuman Ji">
+            </div>
+        </div>
+
+        <div class="page" id="page3">
+            <div class="front_page">
+                <label for="p3CheckBox"></label>
+                <img class="edge_shading" src="../../resources/images/front_page_edge_shading.png"
+                    alt="Front page edge shading">
+                <p class="aartiBanner">आरती श्री विष्णुजी की</p>
+                <span id="firstpageText">
+                    <p>दीनबंधु दुखहर्ता, तुम रक्षक मेरे।</p>
+                    <p>करुणा हस्त उठाओ, द्वार पड़ा तेरे ॥ ॐ...</p>
+                    <p>विषय विकार मिटाओ, पाप हरो देवा।</p>
+                    <p>श्रद्धा भक्ति बढ़ाओ, संतन की सेवा ॥ ॐ...</p>
+                    <p>श्री जगदीश जी की आरति, जो कोइ नर गावे।</p>
+                    <p>कहत शिवानंद स्वामी, सुख संपति पावे ॥ ॐ...</p>
+                </span>
+                <div class="page-number">3</div>
+            </div>
+            <div class="back_page">
+                <label for="p3CheckBox"></label>
+                <img class="edge_shading" src="../../resources/images/back_page_edge_shading.png"
+                    alt="Back page edge shading">
+                <img class="back_content" id="" alt="Back content" src="../../resources/images/VishnuJi/V4"
+                    alt="Hanuman Ji">
+            </div>
+        </div>
+
+        <div class="back_cover" onclick="reloadPage()"></div>
+    </div>
+
+</body>
+<script>
+    function reloadPage() {
+        location.reload();
+    }
+</script>
+
+</html>
